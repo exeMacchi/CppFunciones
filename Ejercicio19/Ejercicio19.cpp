@@ -1,3 +1,6 @@
+// 19. Ejercicio 11 de condicionales (realizar un programa que simule un cajero autom√°tico con un saldo inicial 
+//     de $1000), pero mejorado con funciones.
+
 #include <iostream>
 #include <locale.h>
 
@@ -81,7 +84,7 @@ void mostrarTerminalPrincipal(char Nombre[], float& Saldo)
 
 void despedidaUsuario(char Nombre[])
 {
-    cout << "Hasta la prÛxima, " << Nombre << "\n";
+    cout << "Hasta la pr√≥xima, " << Nombre << "\n";
 }
 
 int mostrarOpciones()
@@ -92,11 +95,11 @@ int mostrarOpciones()
     cout << "2. Retirar dinero de su cuenta." << "\n";
     cout << "3. Consultar el balance de su cuenta." << "\n";
     cout << "4. Salir." << "\n";
-    cout << "\nPor favor, seleccione una opciÛn: "; cin >> Opcion;
+    cout << "\nPor favor, seleccione una opci√≥n: "; cin >> Opcion;
 
     while (Opcion > 4 || Opcion <= 0) {
-        cout << "\nError: opciÛn no disponible." << "\n";
-        cout << "Por favor, seleccione una opciÛn: "; cin >> Opcion;
+        cout << "\nError: opci√≥n no disponible." << "\n";
+        cout << "Por favor, seleccione una opci√≥n: "; cin >> Opcion;
     }
 
     return Opcion;
@@ -108,12 +111,12 @@ bool usuarioDepositar(float& saldo)
     char Operacion;
 
     limpiarConsola();
-    cout << "øCu·nto dinero quiere depositar?: $"; cin >> Dinero;
+    cout << "¬øCu√°nto dinero quiere depositar?: $"; cin >> Dinero;
     saldo += Dinero;
 
     cout << "\nSu nuevo balance: $" << saldo << endl;
 
-    cout << "Quiere realizar alguna otra operaciÛn? (SÌ = 'y' / No = 'n'): "; cin >> Operacion;
+    cout << "Quiere realizar alguna otra operaci√≥n? (S√≠ = 'y' / No = 'n'): "; cin >> Operacion;
     if (Operacion == 'n' || Operacion == 'N') 
     {
         limpiarConsola();
@@ -133,7 +136,7 @@ bool usuarioRetirar(float& saldo)
     char Operacion;
 
     limpiarConsola();
-    cout << "øCu·nto dinero quiere retirar?: $"; cin >> Dinero;
+    cout << "¬øCu√°nto dinero quiere retirar?: $"; cin >> Dinero;
 
     if ((saldo - Dinero) < 0) 
     {
@@ -150,7 +153,7 @@ bool usuarioRetirar(float& saldo)
         saldo -= Dinero;
 
         cout << "\nSu nuevo balance: $" << saldo << endl;
-        cout << "øQuiere realizar alguna otra operaciÛn? (SÌ = 'y' / No = 'n'): "; cin >> Operacion;
+        cout << "¬øQuiere realizar alguna otra operaci√≥n? (S√≠ = 'y' / No = 'n'): "; cin >> Operacion;
 
         if (Operacion == 'n' || Operacion == 'N') 
         {
@@ -172,7 +175,7 @@ bool mostrarBalanceUsuario(float& saldo)
     limpiarConsola();
     cout << "Su balance actual: $" << saldo << endl;
 
-    cout << "øQuiere realizar alguna otra operaciÛn? (SÌ = 'y' / No = 'n'): "; cin >> Operacion;
+    cout << "¬øQuiere realizar alguna otra operaci√≥n? (S√≠ = 'y' / No = 'n'): "; cin >> Operacion;
     if (Operacion == 'n' || Operacion == 'N')
     {
         limpiarConsola();
